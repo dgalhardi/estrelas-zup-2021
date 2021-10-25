@@ -20,7 +20,7 @@ git status - informações sobre a branch em que você estiver no momento
 
 git add <arquivo> - adicionar apenas um arquivo
 
-teste2
+teste2 / Michelle
 
 git add -A - Para adicionar, de uma vez, todos os arquivos modificados
 
