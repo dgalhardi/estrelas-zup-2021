@@ -6,7 +6,7 @@ git clone <https://url-do-link> - É um comando para baixar o código-fonte exis
 
 git branch - É um comando para criar, listar e excluir branches
 
-git branch --list - Para ver as ramificações / Diego
+git branch --list - Para ver as ramificações / Michelle
 
 git push -u <remote> <nome-da-branch> - Subir a nova branch para o repositório remoto
 
