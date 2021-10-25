@@ -1,0 +1,99 @@
+>>> COMANDOS ESSENCIAIS <<<
+
+git init - Cria um repositório vazio ou transforma uma pasta que você já tem, e que não está com controle de versão, em um repositório.
+
+git clone <https://url-do-link> - É um comando para baixar o código-fonte existente de um repositório remoto (como o Github, por exemplo).
+
+git branch - É um comando para criar, listar e excluir branches
+
+git branch --list - Para ver as ramificações
+
+git push -u <remote> <nome-da-branch> - Subir a nova branch para o repositório remoto
+
+git branch -d <nome-da-branch> - Deletando uma branch
+
+git checkout <nome-da-ramificação> -  mudar de um branch para outro
+
+git checkout -b <nome-da-branch> - criar e ir para um branch de uma vez só
+
+git status - informações sobre a branch em que você estiver no momento
+
+git add <arquivo> - adicionar apenas um arquivo
+
+git add -A - Para adicionar, de uma vez, todos os arquivos modificados
+
+git add . - Para adicionar, de uma vez, todos os arquivos modificados
+
+git commit -m "mensagem explicando a mudança no código" - Definir um ponto de verificação no processo de desenvolvimento,
+para o qual você pode voltar mais tarde, se necessário
+
+git push <remote> <nome-do-branch> - Envia e salva suas confirmações no repositório remoto.
+
+git push -u origin <nome-do-branch> - Se seu branch for criado recentemente, você também precisará fazer upload do branch
+
+git pull <remote> - É uma combinação de git fetch (baixa as alterações do repositório remoto mas não mescla elas com o seu)
+e git merge (que mescla tudo junto), o que significa que, quando usamos o git pull, ele recebe as atualizações do repositório
+remoto (git fetch) e aplica imediatamente as alterações mais recentes no seu local (git merge).
+
+git revert 'número do hash' - maneira segura de desfazer os commits
+
+git log --oneline - número do hash pode ser conseguido
+
+git merge <nome-da-branch> - Quando você conclui o desenvolvimento em sua branch e tudo funciona bem, sem conflitos, a
+etapa final é mesclar as branches
+
+git reset --hard - move a branch corrente para o commit HEAD
+
+git cherry-pick 'número do hash' - maneira de fazer o merge de otras alterações
+
+>>>> GIT FLOW <<<<
+
+Branch "FEATURE"
+
+Deve derivar de:
+
+MASTER
+
+Deve sempre juntar-se para:
+
+DEVELOPMENT
+
+Exemplo: feature/squad/pbi-nome
+________________________________________________________________________________________________________________________
+
+Branch "HOTFIX"
+
+Deve derivar de:
+
+MASTER
+
+Deve sempre juntar-se para:
+
+MASTER
+
+Exemplo: hotfix/squad/pbi-nome
+------------------------------------------------------------------------------------------------------------------------
+
+Branch "RELEASE"
+
+Deve derivar de:
+
+FEATURE BRANCH
+
+Deve sempre juntar-se para:
+
+MASTER
+
+Exemplo: release/squad/pbi-nome ou release/sprint-XXX
+________________________________________________________________________________________________________________________
+
+>>> DICAS <<<
+
+Sempre fazer a equalização da MASTER com DEVELOPMENT
+Como boa prática, excluir as branchs (feature, hotfix e release) após mesclados com MASTER
+Pedir code review nas aprovações de Pull Requests
+
+
+
+
+
